@@ -67,7 +67,7 @@
                             @foreach ($agt_user as $user)
                             <tr>
                                 <td><h6 class="mt-3">{{ $sr += 1 }}</h6></td>
-                                <td class="text-capitalize">
+                                <td class="text-capitalize" style="width: 350px;">
                                     <div class="d-flex">
                                         <img src="{{ asset('image/'.$user->image) }}" style="height: 60px; width:60px;" alt="{{ $user->name }}" class="img-fluid rounded-circle mat-shadow">
                                         <h6 class="mt-3 ms-2">{{ $user->name }}</h6>
