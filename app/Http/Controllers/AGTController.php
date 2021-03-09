@@ -7,7 +7,7 @@ use App\Models\Agt;
 Use Alert;
 use Auth;
 
-class AgtController extends Controller
+class AGTController extends Controller
 {
     Public function index(){
         $data['agt_user'] = Agt::orderBy('id','desc')->get();
