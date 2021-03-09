@@ -1,14 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AGTController;
+use App\Http\Controllers\AgtController;
 
-Route::get('/',[AGTController::class,"index"])->name('homepage');
+Route::get('/',[AgtController::class,"index"])->name('homepage');
 
-Route::post('/store',[AGTController::class,"store"])->name('store');
-Route::put('/update/{id}',[AGTController::class,"edit"])->name('edit');
+Route::post('/store',[AgtController::class,"store"])->name('store');
+Route::put('/update/{id}',[AgtController::class,"edit"])->name('edit');
 
-Route::delete('/drop/{id}',[AGTController::class,"drop"])->name('drop');
+Route::delete('/drop/{id}',[AgtController::class,"drop"])->name('drop');
 
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

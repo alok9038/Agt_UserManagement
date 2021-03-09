@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\AGT_User;
+use App\Models\Agt;
 Use Alert;
 use Auth;
 
-class AGTController extends Controller
+class AgtController extends Controller
 {
     Public function index(){
-        $data['agt_user'] = AGT_User::orderBy('id','desc')->get();
+        $data['agt_user'] = Agt::orderBy('id','desc')->get();
         return view('home',$data);
     }
     Public function store(Request $request){
@@ -22,11 +22,11 @@ class AGTController extends Controller
         ]);
         $email = $request->email;
 
-        if(!AGT_User::where('email',$email)->exists()){
+        if(!Agt::where('email',$email)->exists()){
             $filename = time() . "." . $request->image->extension();
             $request->image->move(public_path("image"),$filename);
 
-            $user = new AGT_User();
+            $user = new Agt();
             $user->name = $request->name;
             $user->email = $request->email;
             $user->pincode = $request->pincode;
@@ -41,7 +41,7 @@ class AGTController extends Controller
     }
 
     public function drop($id){
-        AGT_User::where('id',$id)->delete();
+        Agt::where('id',$id)->delete();
         toast('Record Successfully Deleted!','success');
         return redirect()->back();
     }
@@ -52,7 +52,7 @@ class AGTController extends Controller
             'pincode'   => 'digits:6'
         ]);
 
-        AGT_User::where('id',$id)->update([
+        Agt::where('id',$id)->update([
             'name'=>$request->name,
             'email'=>$request->email,
             'pincode'=>$request->pincode
