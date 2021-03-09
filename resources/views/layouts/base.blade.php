@@ -23,7 +23,7 @@
                             <form action="#" method="post" id="myFormName">
                                 @csrf
                             </form>   
-                            <a class="dropdown-item" href="#" onclick="document.forms['myFormName'].submit(); return false;"><i class="fa fa-power-off text-danger"></i> Logout</a> 
+                            <a class="dropdown-item" href="#"><i class="fa fa-power-off text-danger"></i> Logout</a> 
                         </li>
                       </ul>
                 </li>
