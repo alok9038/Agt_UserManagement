@@ -16,7 +16,7 @@
             <a href="{{ route('homepage') }}" class="navbar-brand">AGT USER MANAGEMENT</a>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link text-capitalize dropdown" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">admin<i class="fa fa-angle-down ms-2"></i></a>
+                    <a href="#" class="nav-link text-capitalize dropdown" role="button" id="dropdown" data-bs-toggle="dropdo" aria-expanded="false">admin<i class="fa fa-angle-down ms-2"></i></a>
                     <ul class="dropdown-menu  rounded-0" aria-labelledby="dropdownMenuLink">
                         <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li>
