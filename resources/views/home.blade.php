@@ -56,7 +56,7 @@
                         <table class="table table-hover  table-responsive">
                             <tr class="bg-dark text-light">
                                 <th>Sr no.</th>
-                                <th>Name</th>
+                                <th class="pe-5">Name</th>
                                 <th>E-mail</th>
                                 <th>Pincode</th>
                                 <th>Action</th>
@@ -67,7 +67,7 @@
                             @foreach ($agt_user as $user)
                             <tr>
                                 <td><h6 class="mt-3">{{ $sr += 1 }}</h6></td>
-                                <td class="text-capitalize" style="width: 350px;">
+                                <td class="text-capitalize pe-5">
                                     <div class="d-flex">
                                         <img src="{{ asset('image/'.$user->image) }}" style="height: 60px; width:60px;" alt="{{ $user->name }}" class="img-fluid rounded-circle mat-shadow">
                                         <h6 class="mt-3 ms-2">{{ $user->name }}</h6>
